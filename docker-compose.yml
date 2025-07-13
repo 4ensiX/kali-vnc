@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  kali:
+    build: .
+    ports:
+      - "36080:6080"
+#      - "6080"
+    mem_limit: 4G
+    cpus: '2.0'
+    shm_size: '2gb'
+    security_opt:
+      - "seccomp:unconfined"
+    #environment:
+    #  - VNC_PASSWORD=""
+    # プロセスのクリーンアップを有効化
+    init: true
+
+# docker-compose up -d --scale kali=3
