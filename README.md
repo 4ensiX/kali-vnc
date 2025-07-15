@@ -4,12 +4,14 @@ Using Kali Linux via noVNC
 # Using
 ## Build
 ```
-$ docker-compose up --build -d
+docker-compose up --build -d
 ```
 
 ## Check Password
 ```
-$ docker-compose logs|grep Pass
+docker-compose logs|grep Pass
+```
+```
 [example]  | >>> VNC Password for this container: [example-password] <<<
 ```
 
